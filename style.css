@@ -1,0 +1,66 @@
+.cabecalho{
+    background-color: aqua;
+    grid-area: cabecalho;
+}
+
+.card{
+    background-color: crimson;
+    border: solid 1px #000;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 5px;
+    width: 95%;
+}
+
+.card:hover{
+    margin-left: 15px;
+    background-color: #7b0400;
+}
+
+.menu{
+    background-color: blueviolet;
+    grid-area: menu;
+}
+.conteudo{
+    background-color: rgb(216, 138, 138);
+    grid-area: conteudo;
+    padding: 15px;
+    margin: 0;
+    overflow-y: scroll;
+    height: calc(100vh - 110px);
+    box-sizing: border-box;   /*ajusta o conteudo com 100vh - 'tamanho do rodapé + cabeçalho' */
+}
+
+::-webkit-scrollbar{
+    width: 10px
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #7b0400;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: blueviolet;
+    width: 12px;
+}
+
+.rodape{
+    background-color: chocolate;
+    grid-area: rodape;
+}
+body {
+    margin: 0;
+    font-size: 2em;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 50px;
+    grid-template-areas: 
+    'cabecalho cabecalho'
+    'menu conteudo'
+    'rodape rodape'
+    ;
+
+}
+
